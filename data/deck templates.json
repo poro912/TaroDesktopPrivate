@@ -1,0 +1,14 @@
+{
+	"name": "",
+	"category": ["major","wand","cup","sword","pentacle"],
+	"dack": [
+		{
+			"category": "major/wand/cup/sword/pentacle",
+			"name": "",
+			"number": 0,
+			"forward": [],
+			"reverse": []
+		},
+		{}
+	]
+}
