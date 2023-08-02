@@ -1,4 +1,4 @@
-﻿namespace CardControl
+﻿namespace CardControlLib.UI
 {
     partial class CardControl
     {
@@ -44,6 +44,8 @@
             cardPicture.TabStop = false;
             cardPicture.DoubleClick += cardPicture_DoubleClick;
             cardPicture.MouseClick += cardPicture_MouseClick;
+            cardPicture.MouseDown += cardPicture_MouseDown;
+            cardPicture.MouseMove += cardPicture_MouseMove;
             // 
             // CardControl
             // 

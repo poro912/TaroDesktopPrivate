@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace CardControl
+namespace CardControlLib.UI
 {
     public partial class CardControl : UserControl
     {
@@ -99,10 +99,20 @@ namespace CardControl
             {
                 setFlippStatus(FlipStatus.Front);
             }
-            else if(!_isFlipp)
+            else if (!_isFlipp)
             {
                 setFlippStatus(FlipStatus.Back);
             }
+        }
+
+        private void cardPicture_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.OnMouseMove(e);
+        }
+
+        private void cardPicture_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.OnMouseDown(e);
         }
     }
 }

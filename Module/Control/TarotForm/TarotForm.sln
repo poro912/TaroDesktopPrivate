@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TarotForm", "TarotForm\TarotForm.csproj", "{40BE5675-C39E-46BC-8164-85A5A3AD3096}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardControl", "..\CardControl\CardControl\CardControl.csproj", "{D1C49E5B-5262-42A7-A3D0-DE0F0D483F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardControlLib", "..\CardControl\CardControl\CardControlLib.csproj", "{D1C49E5B-5262-42A7-A3D0-DE0F0D483F5A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityClass", "..\..\Class\UtilityClass\UtilityClass\UtilityClass.csproj", "{8F9DCED6-972F-4DEA-A538-7E44829EE71B}"
 EndProject
