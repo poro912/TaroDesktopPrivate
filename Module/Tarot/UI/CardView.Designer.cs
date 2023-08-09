@@ -1,6 +1,6 @@
-﻿namespace CardControlLib.UI
+﻿namespace Tarot.UI
 {
-    partial class CardControl
+    partial class CardView
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -35,24 +35,23 @@
             // cardPicture
             // 
             cardPicture.Dock = DockStyle.Fill;
-            cardPicture.Image = Properties.Resources.c20556fee77525a3;
             cardPicture.Location = new Point(0, 0);
             cardPicture.Name = "cardPicture";
             cardPicture.Size = new Size(320, 477);
             cardPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             cardPicture.TabIndex = 0;
             cardPicture.TabStop = false;
-            cardPicture.DoubleClick += cardPicture_DoubleClick;
             cardPicture.MouseClick += cardPicture_MouseClick;
+            cardPicture.MouseDoubleClick += cardPicture_MouseDoubleClick;
             cardPicture.MouseDown += cardPicture_MouseDown;
             cardPicture.MouseMove += cardPicture_MouseMove;
             // 
-            // CardControl
+            // CardView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(cardPicture);
-            Name = "CardControl";
+            Name = "CardView";
             Size = new Size(320, 477);
             ((System.ComponentModel.ISupportInitialize)cardPicture).EndInit();
             ResumeLayout(false);

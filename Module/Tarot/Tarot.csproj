@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CardControl\CardControl\CardControlLib.csproj" />
+    <ProjectReference Include="..\TarotLib\TarotLib.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-namespace TarotForm
+namespace Tarot
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace TarotForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new TarotForm());
+            Application.Run(new Forms.TarotForm());
         }
     }
 }

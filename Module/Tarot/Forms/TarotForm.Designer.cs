@@ -1,6 +1,4 @@
-﻿using CardControlLib.UI;
-
-namespace TarotForm
+﻿namespace Tarot.Forms
 {
     partial class TarotForm
     {
