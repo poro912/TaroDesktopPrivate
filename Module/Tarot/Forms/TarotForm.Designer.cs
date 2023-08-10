@@ -1,4 +1,4 @@
-﻿namespace TarotForm
+﻿namespace Tarot.Forms
 {
     partial class TarotForm
     {
@@ -28,29 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cardControl1 = new CardControl.CardControl();
             SuspendLayout();
-            // 
-            // cardControl1
-            // 
-            cardControl1.Location = new Point(233, 37);
-            cardControl1.Name = "cardControl1";
-            cardControl1.Size = new Size(359, 477);
-            cardControl1.TabIndex = 0;
             // 
             // TarotForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(853, 592);
-            Controls.Add(cardControl1);
+            ClientSize = new Size(1120, 738);
             Name = "TarotForm";
             Text = "Form1";
+            Load += TarotForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private CardControl.CardControl cardControl1;
     }
 }

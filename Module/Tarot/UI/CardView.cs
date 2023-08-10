@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using System.ComponentModel;
+using TarotLib.Models;
 
-namespace CardControl
+namespace Tarot.UI
 {
-    public partial class CardControl : UserControl
+    public partial class CardView : UserControl
     {
-        private string _cardInfo = string.Empty;
-        private bool _isFlipp = false;
-        private bool _isRotate = false;
+        public Card CardData;
+        private bool _isFlip;
+        private bool _isRotate;
 
         public enum FlipStatus
         {
@@ -24,27 +15,27 @@ namespace CardControl
             Front,
         }
 
-        public CardControl()
+        public CardView()
         {
             InitializeComponent();
+            CardData = new Card();
+            _isFlip = false;
+            _isRotate = false;
         }
 
-        // public void setCardData(CardData cardData)
-        // {
-        //     _cardInfo = cardData.info;
-        //     cardPicture.Image = (Image)cardData.image.Clone();
-        // }
-
-        // 앞뒤 뒤집는거 추가하기
-
-        private void cardPicture_DoubleClick(object sender, EventArgs e)
+        public CardView(string name, Bitmap frontImage, Bitmap backImage, string info)
         {
-            degreeCard();
+            InitializeComponent();
+            _isFlip = false;
+            _isRotate = false;
+            CardData = new Card(name, frontImage, backImage, info);
+            cardPicture.Image = CardData.BackImage;
         }
 
         public void degreeCard()    // 90도 회전
         {
-            pictureRotate(cardPicture.Image);
+            pictureRotate(CardData.BackImage);
+            pictureRotate(CardData.FrontImage);
 
             int oldWidth = this.Width;
             int oldHeight = this.Height;
@@ -68,22 +59,13 @@ namespace CardControl
 
         public void setFlippStatus(FlipStatus status)   // 카드 뒤집기
         {
-
             if (status == FlipStatus.Back)
-            {
-                cardPicture.Image = Properties.Resources.iu;
-                if (this._isRotate)
-                    pictureRotate(cardPicture.Image);
-            }
+                cardPicture.Image = CardData.BackImage;
             else if (status == FlipStatus.Front)
-            {
-                cardPicture.Image = Properties.Resources.c20556fee77525a3;
-                if (this._isRotate)
-                    pictureRotate(cardPicture.Image);
-            }
+                cardPicture.Image = CardData.FrontImage;
 
             //현재상태의 반대로 저장 ((예) true 일경우 !true 는 false 임으로 false 가 저장됨)
-            this._isFlipp = !this._isFlipp;
+            this._isFlip = !this._isFlip;
         }
 
         public void setVisible(bool value)  // 카드 및 내용 보이기
@@ -91,18 +73,36 @@ namespace CardControl
             this.Visible = value;
         }
 
+        #region Event Method
+        private void cardPicture_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.OnMouseMove(e);
+        }
+
+        private void cardPicture_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.OnMouseDown(e);
+        }
+
+        private void cardPicture_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left) return;
+            degreeCard();
+        }
+
         private void cardPicture_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Right)
                 return;
-            if (_isFlipp)
+            if (_isFlip)
             {
                 setFlippStatus(FlipStatus.Front);
             }
-            else if(!_isFlipp)
+            else if (!_isFlip)
             {
                 setFlippStatus(FlipStatus.Back);
             }
         }
+        #endregion
     }
 }
