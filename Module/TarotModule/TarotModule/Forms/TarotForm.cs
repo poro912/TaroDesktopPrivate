@@ -1,6 +1,6 @@
-
 using Tarot.UI;
 using Resources = Tarot.Properties.Resources;
+
 namespace Tarot.Forms
 {
     public partial class TarotForm : Form
