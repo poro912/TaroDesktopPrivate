@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TarotLib", "TarotLib\TarotLib.csproj", "{0823D104-B817-436B-B01D-9E378A9BEBBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0823D104-B817-436B-B01D-9E378A9BEBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0823D104-B817-436B-B01D-9E378A9BEBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0823D104-B817-436B-B01D-9E378A9BEBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0823D104-B817-436B-B01D-9E378A9BEBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {556757E2-D0B6-4AD1-96A8-C6B2284DF49B}
+	EndGlobalSection
+EndGlobal

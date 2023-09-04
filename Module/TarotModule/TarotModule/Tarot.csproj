@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TarotLib\TarotLib.csproj" />
+    <Reference Include="TarotLib">
+      <HintPath>..\..\TarotLib\bin\Debug\net7.0\TarotLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
