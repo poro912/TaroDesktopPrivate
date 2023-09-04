@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TaroInterface
 {
-	internal class spread
+	internal class Spread
 	{
+
 	}
 }
