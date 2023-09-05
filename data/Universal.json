@@ -6,8 +6,8 @@
 			"category": "major/wand/cup/sword/pentacle",
 			"name": "",
 			"number": 0,
-			"forward": ["2분의1확률에 성공함", "바보"],
-			"reverse": ["2분의 1확률에 실패함", "아무런 생각이 없음"]
+			"forward": [],
+			"reverse": []
 		},
 		{}
 	]
