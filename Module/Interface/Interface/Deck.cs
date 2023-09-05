@@ -51,6 +51,16 @@ namespace TaroInterface
 			return null;
 		}
 
+		public void shuffle()
+		{
+
+		}
+
+		public Card? random()
+		{
+			return null;
+		}
+
 		public Card? Next()
 		{
 			if(++idx >= cards.Count) idx %= cards.Count;

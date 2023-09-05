@@ -10,7 +10,7 @@ namespace TaroInterface
 	{
 		private int number = -1;
 		private string name = "";
-		private string category = "";
+		private string? category = "";
 
 		
 		public int Number{ get; set; }
