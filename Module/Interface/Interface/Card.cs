@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace TaroInterface
 {
-	internal class Card
+    public class Card
 	{
-		private int number = -1;
-		private string name = "";
-		private string? category = "";
+		// private int number = -1;
+		// private string name = "";
+		// private string? category = "";
 
 		
 		public int Number{ get; set; }
-		public int Name { get; set; }
-		public int Category { get; set; }
+		public string Name { get; set; }	// int -> string
+		public string? Category { get; set; } // int -> string?
 
 		public List<string> forward;
 		public List<string> reverse;
 
 		public Card(string name, int number) 
 		{ 
-			this.name = name;
-			this.number = number;
+			this.Name = name;	// name -> Name
+			this.Number = number;	// number -> Number
 			forward = new List<string>();
 			reverse = new List<string>();
 		}
 		public Card(string name, int number, string category)
 		{
-			this.name = name;
-			this.number = number;
-			this.category = category;
+			this.Name = name;   // name -> Name
+            this.Number = number;   // number -> Number
+            this.Category = category; // category -> Category
 			forward = new List<string>();
 			reverse = new List<string>();
 		}

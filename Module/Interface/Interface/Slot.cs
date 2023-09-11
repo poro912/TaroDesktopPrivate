@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaroInterface
 {
-	internal class Slot
+    public class Slot
 	{
 		private int x, y;
 		private Card? card;
