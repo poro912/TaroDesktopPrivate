@@ -47,13 +47,15 @@ namespace TaroInterface
 			return result;
 		}
 
-		// 
+		// pop에서 삭제 명령 없이 맨 뒤의 요소를 반환
 		public Card? peek()
 		{
-			return null;
-		}
+            Card result = null;
+            result = cards[cards.Count - 1];
+            return result;
+        }
 
-		// (완)
+		// 카드 리스트에 추가
 		public void push(Card card)
 		{
 			cards.Add(card);
@@ -66,21 +68,15 @@ namespace TaroInterface
 			var shuffledcards = cards.OrderBy(a=>Guid.NewGuid()).ToList();
 			cards.Clear();
 			cards.AddRange(shuffledcards);
-
-			// 단순 2중첩 for문
-			//for (int i = 0; i < cards.Count; i++)
-			//{
-			//	for (int j = 0; j < cards.Count; j++)
-			//	{
-			//		// 랜덤이 들어가야 하는거 아닌가..?
-			//	}
-			//}
 		}
 
-		// 
-		public Card? random()
+		// 배열의 리스트에서 랜덤하게 하나를 가져오는거
+		public Card? randomPick() // 함수명 변경 (random -> randomPick)
 		{
-			return null;
+			Random rand = new Random();
+			Card result = cards[rand.Next(cards.Count - 1)];
+
+			return result;
 		}
 
 		public Card? Next()
