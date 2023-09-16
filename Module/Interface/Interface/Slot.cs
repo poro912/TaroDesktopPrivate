@@ -10,11 +10,16 @@ namespace TaroInterface
 	{
 		private int x, y;
 		private Card? card;
-		private string? mean;
 
-		public int X { get; set; }
-		public int Y { get; set; }
-		public string? Mean { get; set; }
+		public int X
+		{
+			get { return x; }
+		}
+		public int Y
+        {
+            get { return y; }
+        }
+        public string? mean { get; set; }
 		public Card? Card { get { return card; } }
 		
 		public bool registCard(Card card)

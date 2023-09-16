@@ -8,30 +8,25 @@ namespace TaroInterface
 {
     public class Card
 	{
-		// private int number = -1;
-		// private string name = "";
-		// private string? category = "";
-
-		
-		public int Number{ get; set; }
-		public string Name { get; set; }	// int -> string
-		public string? Category { get; set; } // int -> string?
+		public int number{ get; set; }
+		public string name { get; set; }
+		public string? category { get; set; }
 
 		public List<string> forward;
 		public List<string> reverse;
 
 		public Card(string name, int number) 
 		{ 
-			this.Name = name;	// name -> Name
-			this.Number = number;	// number -> Number
+			this.name = name;
+			this.number = number;
 			forward = new List<string>();
 			reverse = new List<string>();
 		}
 		public Card(string name, int number, string category)
 		{
-			this.Name = name;   // name -> Name
-            this.Number = number;   // number -> Number
-            this.Category = category; // category -> Category
+			this.name = name;
+            this.number = number;
+            this.category = category;
 			forward = new List<string>();
 			reverse = new List<string>();
 		}

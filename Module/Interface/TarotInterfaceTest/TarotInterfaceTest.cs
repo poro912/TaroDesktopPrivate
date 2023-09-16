@@ -9,11 +9,13 @@ namespace TarotInterfaceTest
 
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"{i + 1} 번째 결과");
-                randomTest();
-            }
+            // for (int i = 0; i < 10; i++)
+            // {
+            //     Console.WriteLine($"{i + 1} 번째 결과");
+            //     randomTest();
+            // }
+
+            shuffleTest();
         }
 
         // pop 테스트
@@ -24,7 +26,7 @@ namespace TarotInterfaceTest
             deck.push(card1);
             deck.push(card2);
             Card result_pop = deck.pop();
-            Console.WriteLine($"{result_pop.Name}, {result_pop.Number}");
+            Console.WriteLine($"{result_pop.name}, {result_pop.number}");
         }
 
 
@@ -36,7 +38,7 @@ namespace TarotInterfaceTest
             deck.push(card3);
             deck.push(card4);
             Card result_peek = deck.peek();
-            Console.WriteLine($"{result_peek.Name}, {result_peek.Number}");
+            Console.WriteLine($"{result_peek.name}, {result_peek.number}");
         }
 
         // random 테스트
@@ -52,6 +54,7 @@ namespace TarotInterfaceTest
             Card card12 = new Card("H", 12);
             Card card13 = new Card("I", 13);
             Card card14 = new Card("J", 14);
+            deck.push(new Card("J", 14));
             deck.push(card5);
             deck.push(card6);
             deck.push(card7);
@@ -65,8 +68,9 @@ namespace TarotInterfaceTest
             for (int i = 0; i < 10; i++)
             {
                 Card result_random = deck.randomPick();
-                Console.WriteLine($"{result_random.Name}, {result_random.Number}");
+                Console.WriteLine($"{result_random.name}, {result_random.number}");
             }
+            Console.WriteLine("\n");
         }
 
 
