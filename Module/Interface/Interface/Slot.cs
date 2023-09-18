@@ -13,11 +13,11 @@ namespace TaroInterface
 
 		public int X
 		{
-			get { return x; }
+			get; private set;
 		}
 		public int Y
         {
-            get { return y; }
+            get; private set;
         }
         public string? mean { get; set; }
 		public Card? Card { get { return card; } }

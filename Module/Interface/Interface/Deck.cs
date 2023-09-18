@@ -11,6 +11,7 @@ namespace TaroInterface
 	{
 		// 스택, 환영 큐, 등 여러 자료형을 한번에 사용할 수 있도록 설계함
 		public List<Card> cards;
+		private static Random rand = new Random();
 		private int idx = 0;
 
 		public Card? this[int index]
@@ -76,12 +77,9 @@ namespace TaroInterface
             // cards.Clear();
 			// cards.AddRange(shuffledcards);
 
-			Random random = new Random();
-			int n = cards.Count;
-
-			for (int i = 0; i < n; i++)
+			for (int i = 0; i < cards.Count; i++)
 			{
-				int j = random.Next(i, n);
+				int j = rand.Next(i, cards.Count);
 				Card temp = cards[i];
 				cards[i] = cards[j];
 				cards[j] = temp;
@@ -93,13 +91,12 @@ namespace TaroInterface
 		{
             if (cards.Count == 0) return null;
 
-            Random rand = new Random();
-			Card result = cards[rand.Next(cards.Count - 1)];
+			Card result = cards[rand.Next(cards.Count)];
 
 			return result;
 		}
 
-		public Card? Next()
+		public Card? next()
 		{
             if (cards.Count == 0) return null;
 

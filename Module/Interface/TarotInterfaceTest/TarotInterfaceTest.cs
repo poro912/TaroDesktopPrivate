@@ -9,13 +9,17 @@ namespace TarotInterfaceTest
 
         static void Main(string[] args)
         {
+            // popTest();
+
+            // peekTest();
+
             // for (int i = 0; i < 10; i++)
             // {
             //     Console.WriteLine($"{i + 1} 번째 결과");
             //     randomTest();
             // }
 
-            shuffleTest();
+            // nextTest();
         }
 
         // pop 테스트
@@ -26,49 +30,63 @@ namespace TarotInterfaceTest
             deck.push(card1);
             deck.push(card2);
             Card result_pop = deck.pop();
-            Console.WriteLine($"{result_pop.name}, {result_pop.number}");
+            
+            if (result_pop == null)
+            {
+                Console.WriteLine("null입니다.");
+            }
+            else
+            {
+                Console.WriteLine($"{result_pop.name}, {result_pop.number}");
+            }
         }
 
 
         // peek 테스트
-        static void pickTest()
+        static void peekTest()
         {
             Card card3 = new Card("ABC", 3);
             Card card4 = new Card("DEF", 4);
             deck.push(card3);
             deck.push(card4);
             Card result_peek = deck.peek();
-            Console.WriteLine($"{result_peek.name}, {result_peek.number}");
+
+            if (result_peek == null)
+            {
+                Console.WriteLine("null입니다.");
+            }
+            else
+            {
+                Console.WriteLine($"{result_peek.name}, {result_peek.number}");
+            }
         }
 
         // random 테스트
         static void randomTest()
         {
-            Card card5 = new Card("A", 5);
-            Card card6 = new Card("B", 6);
-            Card card7 = new Card("C", 7);
-            Card card8 = new Card("D", 8);
-            Card card9 = new Card("E", 9);
-            Card card10 = new Card("F", 10);
-            Card card11 = new Card("G", 11);
-            Card card12 = new Card("H", 12);
-            Card card13 = new Card("I", 13);
-            Card card14 = new Card("J", 14);
+            deck.push(new Card("A", 5));
+            deck.push(new Card("B", 6));
+            deck.push(new Card("C", 7));
+            deck.push(new Card("D", 8));
+            deck.push(new Card("E", 9));
+            deck.push(new Card("F", 10));
+            deck.push(new Card("G", 11));
+            deck.push(new Card("H", 12));
+            deck.push(new Card("I", 13));
             deck.push(new Card("J", 14));
-            deck.push(card5);
-            deck.push(card6);
-            deck.push(card7);
-            deck.push(card8);
-            deck.push(card9);
-            deck.push(card10);
-            deck.push(card11);
-            deck.push(card12);
-            deck.push(card13);
-            deck.push(card14);
+
             for (int i = 0; i < 10; i++)
             {
                 Card result_random = deck.randomPick();
-                Console.WriteLine($"{result_random.name}, {result_random.number}");
+
+                if (result_random == null)
+                {
+                    Console.WriteLine("null입니다.");
+                }
+                else
+                {
+                    Console.WriteLine($"{result_random.name}, {result_random.number}");
+                }
             }
             Console.WriteLine("\n");
         }
@@ -96,6 +114,23 @@ namespace TarotInterfaceTest
             {
                 Card card = new Card($"{i}번 카드", i);
                 deck.push(card);
+            }
+        }
+
+        // next 테스트
+        static void nextTest()
+        {
+            deck.push(new Card("A", 15));
+            deck.push(new Card("B", 16));
+            deck.push(new Card("C", 17));
+            deck.push(new Card("D", 18));
+            deck.push(new Card("E", 19));
+            deck.push(new Card("F", 20));
+
+            for (int i = 0; i < 5; i++)
+            {
+                Card result_next = deck.next();
+                Console.WriteLine($"{result_next.name}, {result_next.number}");
             }
         }
     }
