@@ -39,7 +39,7 @@ namespace TaroInterface
 			cards.Insert(0, card);
 		}
 
-		// 맨 뒤에 있는 카드를 리스트에서 제거하고, 반환한다. (완)
+		// 맨 뒤에 있는 카드를 리스트에서 제거하고, 반환한다.
 		public Card? pop()
 		{
 			if (cards.Count == 0) return null;
@@ -52,9 +52,9 @@ namespace TaroInterface
 		// pop에서 삭제 명령 없이 맨 뒤의 요소를 반환
 		public Card? peek()
 		{
-            if (cards.Count == 0) return null;
+			if (cards.Count == 0) return null;
 
-            return cards[cards.Count - 1];
+			return cards[cards.Count - 1];
 		}
 
 		// 카드 리스트에 추가
@@ -66,30 +66,20 @@ namespace TaroInterface
 		// 2중첩 for문 이용해 셔플
 		public void shuffle()
 		{
-			// Linq의 OrderBy 메소드를 이용해 각 요소를 GUID 기반으로 정렬하여 무작위 순서로 섞음.
-			// 한 번을 돌리든, 두 번을 돌리는 shuffledcards 리스트를 다시 덮어씌우는 행위이기에 몇 번을 돌리는 결과는 동일하다.
-			// var shuffledcards = new List<Card>();
-			// 
-            // for (int i = 0; i < 2; i++)
-			// {
-            //     shuffledcards = cards.OrderBy(a => Guid.NewGuid()).ToList();
-            // }
-            // cards.Clear();
-			// cards.AddRange(shuffledcards);
-
-			for (int i = 0; i < cards.Count; i++)
+			var shuffledcards = new List<Card>();
+			shuffledcards = cards;
+			for (int i = 0; i < 3; i++)
 			{
-				int j = rand.Next(i, cards.Count);
-				Card temp = cards[i];
-				cards[i] = cards[j];
-				cards[j] = temp;
+				shuffledcards = shuffledcards.OrderBy(a => Guid.NewGuid()).ToList();
 			}
+			cards.Clear();
+			cards.AddRange(shuffledcards);
 		}
 
 		// 배열의 리스트에서 랜덤하게 하나를 가져오는거
 		public Card? randomPick() // 함수명 변경 (random -> randomPick)
 		{
-            if (cards.Count == 0) return null;
+			if (cards.Count == 0) return null;
 
 			Card result = cards[rand.Next(cards.Count)];
 
@@ -98,9 +88,9 @@ namespace TaroInterface
 
 		public Card? next()
 		{
-            if (cards.Count == 0) return null;
+			if (cards.Count == 0) return null;
 
-            idx = (idx + 1) % cards.Count;
+			idx = (idx + 1) % cards.Count;
 			return cards[idx];
 		}
 
