@@ -10,4 +10,10 @@
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="TaroInterface">
+      <HintPath>..\..\Interface\Interface\bin\Debug\net7.0-windows\TaroInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
