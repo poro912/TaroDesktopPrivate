@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace TaroInterface
 {
-	internal class Slot
+	public class Slot
 	{
-		private int x, y;
-		private Card? card;
-		private string? mean;
-
-		public int X { get; set; }
-		public int Y { get; set; }
-		public string? Mean { get; set; }
-		public Card? Card { get { return card; } }
+		public int x { get; set; }
+		public int y { get; set; }
+		public string? mean { get; set; }
+		public Card? card { get; private set; }
 		
 		public bool registCard(Card card)
 		{
@@ -25,11 +21,11 @@ namespace TaroInterface
 
 		public bool removeCard()
 		{
-			if(this.card == null)
+			if (this.card == null)
 				return false; 
 			
 			this.card = null;
-			return true;
+				return true;
 		}
 	}
 }
