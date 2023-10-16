@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using TarotLib.Models;
+using TaroInterface;
 
 namespace TarotLib
 {
@@ -31,28 +31,30 @@ namespace TarotLib
 			}
 		}
 
-		public List<Card>? readCards()
+		public List<Deck>? readCards()
 		{
 			try
 			{
 				using (var streamReader = new StreamReader(fs))
 				{
+					// fs의 모든 글자를 읽는다.
 					var jsonString = streamReader.ReadToEnd();
-					// JSON 데이터를 읽어서 Card 객체로 역직렬화합니다.
 
+					// JSON 데이터를 읽어서 Card 객체로 역직렬화합니다.
 					JsonDocument document = JsonDocument.Parse(jsonString);
 
 					JsonElement root_element = document.RootElement;
 					//Console.WriteLine(document.RootElement);
 					JsonElement deck_name = root_element.GetProperty("name");
 					JsonElement cards = root_element.GetProperty("cards");
+					JsonElement category = root_element.GetProperty("category");
 					//JsonElement deck_name = root_element.GetProperty("name");
 
 					for( int i = 0; i < cards.GetArrayLength(); i++)
 					{
 						cards[i].GetProperty("category");
 						cards[i].GetProperty("number");
-						cards[i].GetProperty("number");
+						cards[i].GetProperty("name");
 						cards[i].GetProperty("forward");
 						cards[i].GetProperty("reverse");
 					}

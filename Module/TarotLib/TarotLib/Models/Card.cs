@@ -7,6 +7,8 @@ namespace TarotLib.Models
         private bool _disposed = false;
 
         public string Name { get; private set; } = string.Empty;
+        public string Category { get; private set; } = string.Empty;
+        public int number { get; set; } = 0;
         public Bitmap BackImage { get; set; } = null;
         public Bitmap FrontImage { get; set; } = null;
         public string Info { get; private set; } = string.Empty;

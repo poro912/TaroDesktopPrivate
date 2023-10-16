@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TarotLib\TarotLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TaroInterface">
+      <HintPath>..\..\Interface\Interface\bin\Debug\net7.0-windows\TaroInterface.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

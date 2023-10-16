@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="TarotLib">
+      <HintPath>..\..\TarotLib\TarotLib\bin\Debug\net7.0\TarotLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

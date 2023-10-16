@@ -8,18 +8,17 @@ namespace TaroInterface
 {
 	public class Card
 	{
+		public string? category { get; set; }
 		public int number { get; set; }
 		public string name { get; set; }
-		public string? category { get; set; }
 
 		public List<string> forward;
 		public List<string> reverse;
 
-		public Card(string name = "The Pool", int number = 0, string category = "")
+		public Card(string name = "", int number = -1)
 		{
 			this.name = name;
 			this.number = number;
-			this.category = category;
 			forward = new List<string>();
 			reverse = new List<string>();
 		}
