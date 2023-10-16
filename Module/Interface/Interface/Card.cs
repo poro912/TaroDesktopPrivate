@@ -25,7 +25,10 @@ namespace TaroInterface
 
 		public Card(string name = "", int number = -1, string category = "")
 		{
-
+			this.name = name;
+			this.number = number;
+			forward = new List<string>();
+			reverse = new List<string>();
 		}
 
 		public void addForwardMean(string mean) { forward.Add(mean);  }
