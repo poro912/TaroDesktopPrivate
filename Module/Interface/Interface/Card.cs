@@ -15,12 +15,17 @@ namespace TaroInterface
 		public List<string> forward;
 		public List<string> reverse;
 
-		public Card(string category, string name = "", int number = -1)
+		public Card(string name = "", int number = -1)
 		{
 			this.name = name;
 			this.number = number;
 			forward = new List<string>();
 			reverse = new List<string>();
+		}
+
+		public Card(string name = "", int number = -1, string category = "")
+		{
+
 		}
 
 		public void addForwardMean(string mean) { forward.Add(mean);  }
