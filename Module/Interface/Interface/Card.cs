@@ -15,7 +15,7 @@ namespace TaroInterface
 		public List<string> forward;
 		public List<string> reverse;
 
-		public Card(string name = "", int number = -1)
+		public Card(string category, string name = "", int number = -1)
 		{
 			this.name = name;
 			this.number = number;
