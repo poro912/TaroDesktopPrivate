@@ -27,6 +27,7 @@ namespace TaroInterface
 		{
 			this.name = name;
 			this.number = number;
+			this.category = category;
 			forward = new List<string>();
 			reverse = new List<string>();
 		}
