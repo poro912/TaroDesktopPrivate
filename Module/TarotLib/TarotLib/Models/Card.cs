@@ -6,12 +6,12 @@ namespace TarotLib.Models
     {
         private bool _disposed = false;
 
-        public string Name { get; private set; } = string.Empty;
-        public string Category { get; private set; } = string.Empty;
+        public string name { get; private set; } = string.Empty;
+        public string category { get; private set; } = string.Empty;
         public int number { get; set; } = 0;
-        public Bitmap BackImage { get; set; } = null;
-        public Bitmap FrontImage { get; set; } = null;
-        public string Info { get; private set; } = string.Empty;
+        public Bitmap backImage { get; set; } = null;
+        public Bitmap frontImage { get; set; } = null;
+        public string info { get; private set; } = string.Empty;
 
         public Card() // 생성자 오버로딩
         {
@@ -20,29 +20,29 @@ namespace TarotLib.Models
 
         public Card(string name, Bitmap frontImage, Bitmap backImage, string info) // 생성자 오버로딩
         {
-            this.Name = name;
-            this.BackImage = backImage;
-            this.FrontImage = frontImage;
-            this.Info = info;
+            this.name = name;
+            this.backImage = backImage;
+            this.frontImage = frontImage;
+            this.info = info;
         }
 
         public void setName(string name)
         {
-            this.Name = name;
+            this.name = name;
         }
 
         public void setBackImage(Bitmap img)
         {
-            this.BackImage = img;
+            this.backImage = img;
         }
         public void setFrontImage(Bitmap img)
         {
-            this.FrontImage = img;
+            this.frontImage = img;
         }
 
         public void setInfo(string info)
         {
-            this.Info = info;
+            this.info = info;
         }
 
         public void Dispose()
@@ -57,10 +57,10 @@ namespace TarotLib.Models
                 return;
             if (disposing)
             {
-                Info = string.Empty;
-                Name = string.Empty;
-                BackImage.Dispose();
-                FrontImage.Dispose();
+                info = string.Empty;
+                name = string.Empty;
+                backImage.Dispose();
+                frontImage.Dispose();
             }
             _disposed = true;
         }
