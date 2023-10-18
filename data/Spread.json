@@ -1,0 +1,104 @@
+[
+	{
+		"name": "tree card",
+		"description": "",
+		"slots": [
+			{
+				"x": 0,
+				"y": 0,
+				"angle": 0,
+				"mean": "Past"
+			},
+			{
+				"x": 100,
+				"y": 0,
+				"angle": 0,
+				"mean": "present"
+			},
+			{
+				"x": 200,
+				"y": 0,
+				"angle": 0,
+				"mean": "future"
+			}
+		]
+	},
+	{
+		"name": "Celtic cross",
+		"description": "",
+		"slots": [
+			{
+				"x": 100,
+				"y": 200,
+				"angle": 0,
+				"mean": "현재 상황"
+			},
+			{
+				"x": 100,
+				"y": 200,
+				"angle": 45,
+				"mean": "장애물"
+			},
+			{
+				"x": 100,
+				"y": 0,
+				"angle": 0,
+				"mean": "무의식"
+			},
+			{
+				"x": 0,
+				"y": 200,
+				"angle": 0,
+				"mean": "과거"
+			},
+			{
+				"x": 100,
+				"y": 300,
+				"angle": 0,
+				"mean": "현재"
+			},
+			{
+				"x": 200,
+				"y": 200,
+				"angle": 0,
+				"mean": "미래"
+			},
+			{
+				"x": 300,
+				"y": 300,
+				"angle": 0,
+				"mean": "인식하고 있는 나의 모습"
+			},
+			{
+				"x": 300,
+				"y": 200,
+				"angle": 0,
+				"mean": "주변의 영향력"
+			},
+			{
+				"x": 300,
+				"y": 100,
+				"angle": 0,
+				"mean": "두려워하는 것"
+			},
+			{
+				"x": 300,
+				"y": 0,
+				"angle": 0,
+				"mean": "결과"
+			}
+		]
+	},
+	{
+		"name": "",
+		"description": "",
+		"slots": [
+			{
+				"x": 0,
+				"y": 0,
+				"angle": 0,
+				"mean": ""
+			}
+		]
+	}
+]
