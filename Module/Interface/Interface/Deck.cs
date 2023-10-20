@@ -11,8 +11,10 @@ namespace TaroInterface
 	public class Deck
 	{
 		// 스택, 환영 큐, 등 여러 자료형을 한번에 사용할 수 있도록 설계함
-		public List<Card> cards;
-		private static Random rand = new Random();
+		public List<Card> cards { get; set; }
+		public string name { get; set; }
+		public List<string> category { get; set; }
+
 		private int idx = 0;
 
 		public Card? this[int index]
@@ -80,6 +82,8 @@ namespace TaroInterface
 		// 배열의 리스트에서 랜덤하게 하나를 가져오는거
 		public Card? randomPick() // 함수명 변경 (random -> randomPick)
 		{
+			Random rand = new Random();
+
 			if (cards.Count == 0) return null;
 
 			Card result = cards[rand.Next(cards.Count)];
