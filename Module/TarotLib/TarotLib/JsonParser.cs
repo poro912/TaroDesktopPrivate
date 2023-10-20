@@ -20,12 +20,10 @@ namespace TarotLib
 			try
 			{
 				fs = File.OpenRead(path);
-				// 열고자 하는 JSON 파일을 FileStream으로 엽니다.
 				return fs;
 			}
 			catch (Exception e)
 			{
-				// 파일을 열다가 오류가 발생한 경우 예외 처리
 				Console.WriteLine($"파일 열기 오류: {e.Message}");
 				return null;
 			}
@@ -54,7 +52,6 @@ namespace TarotLib
 			}
 			catch (Exception e)
 			{
-				// JSON 데이터를 읽다가 오류가 발생한 경우 예외 처리
 				Console.WriteLine($"JSON 데이터 읽기 오류: {e.Message}");
 				return null;
 			}
@@ -66,15 +63,13 @@ namespace TarotLib
 			List<Card> cardList = new();
 			foreach (JsonElement cardData in cardsElement.EnumerateArray())
 			{
-				string cardName = cardData.GetProperty("name").ToString();
-				string number = cardData.GetProperty("number").ToString();
-				string cardCategory = cardData.GetProperty("category").ToString();
-				string[] forward = cardData.GetProperty("forward").ToString().Split(',');
-				string[] reverse = cardData.GetProperty("forward").ToString().Split(',');
-
-				Card card = new Card(cardName, int.Parse(number), cardCategory);
-				card.forward = forward.ToList();
-				card.reverse = reverse.ToList();
+				Card card = new Card {
+					name = cardData.GetProperty("name").ToString(),
+					number = int.Parse(cardData.GetProperty("number").ToString()),
+					category = cardData.GetProperty("category").ToString(),
+					forward = cardData.GetProperty("forward").ToString().Split(',').ToList(),
+					reverse = cardData.GetProperty("reverse").ToString().Split(',').ToList()
+				};
 
 				cardList.Add(card);
 			}
