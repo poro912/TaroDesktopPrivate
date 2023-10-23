@@ -12,8 +12,9 @@ namespace TaroInterface
 		public int number { get; set; }
 		public string category { get; set; }
 
-		public List<string> forward;
-		public List<string> reverse;
+		public List<string> forward { get; }
+		public List<string> reverse { get; }
+
 
 		public Card()
 		{
@@ -41,7 +42,14 @@ namespace TaroInterface
 			reverse = new List<string>();
 		}
 
-		public void addForwardMean(string mean) { forward.Add(mean);  }
-		public void addFrontMean(string mean) { forward.Add(mean); }
+		public void addForwardMean(string mean)
+		{
+			forward.Add(mean);
+		}
+
+		public void addReverseMean(string mean)
+		{
+			reverse.Add(mean);
+		}
 	}
 }

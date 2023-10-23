@@ -63,14 +63,16 @@ namespace TarotLib
 			List<Card> cardList = new();
 			foreach (JsonElement cardData in cardsElement.EnumerateArray())
 			{
+				List<string> fowards = cardData.GetProperty("forward").EnumerateArray().Select(forwardData => forwardData.ToString()).ToList();
+				List<string> reverse = cardData.GetProperty("reverse").EnumerateArray().Select(reverseData => reverseData.ToString()).ToList();
+
 				Card card = new Card {
 					name = cardData.GetProperty("name").ToString(),
 					number = int.Parse(cardData.GetProperty("number").ToString()),
 					category = cardData.GetProperty("category").ToString(),
-					forward = cardData.GetProperty("forward").ToString().Split(',').ToList(),
-					reverse = cardData.GetProperty("reverse").ToString().Split(',').ToList()
+					forward = fowards,
+					reverse = reverse
 				};
-
 				cardList.Add(card);
 			}
 			return cardList;

@@ -5,7 +5,12 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TarotLib", "TarotLib\TarotLib.csproj", "{0823D104-B817-436B-B01D-9E378A9BEBBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libTest", "libTest\libTest.csproj", "{8B15F8B4-638E-4741-A501-9AA1C590DB50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "libTest", "libTest\libTest.csproj", "{8B15F8B4-638E-4741-A501-9AA1C590DB50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FB29E58-F639-4C1B-85EC-8B144A8BBE3F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
