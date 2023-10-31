@@ -12,8 +12,8 @@ namespace TaroInterface
 		public int number { get; set; }
 		public string category { get; set; }
 
-		public List<string> forward { get; }
-		public List<string> reverse { get; }
+		public List<string> forward { get; set; }
+		public List<string> reverse { get; set; }
 
 
 		public Card()

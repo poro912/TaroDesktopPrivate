@@ -78,10 +78,10 @@ namespace TarotLib
 			return cardList;
 		}
 
-		public List<Card>? readSpread()
-		{
-			return null;
-		}
+		// public List<Card>? readSpread()
+		// {
+		// 	return null;
+		// }
 
 		public void close()
 		{

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="TaroInterface">
+      <HintPath>..\..\Interface\Interface\bin\Debug\net7.0-windows\TaroInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="TarotLib">
+      <HintPath>..\TarotLib\bin\Debug\net7.0\TarotLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

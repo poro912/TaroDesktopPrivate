@@ -11,21 +11,28 @@ namespace TaroInterface
 		public int x { get; set; }
 		public int y { get; set; }
 		public string? mean { get; set; }
-		public Card? card { get; private set; }
-		
-		public bool registCard(Card card)
-		{
-			this.card = card;
-			return true;
-		}
 
-		public bool removeCard()
+		//사용 안댐
+		//public Card? card { get; private set; }
+
+		//public bool registCard(Card card)
+		//{
+		//	this.card = card;
+		//	return true;
+		//}
+		//
+		//public bool removeCard()
+		//{
+		//	if (this.card == null)
+		//		return false; 
+		//	
+		//	this.card = null;
+		//		return true;
+		//}
+
+		public override string ToString()
 		{
-			if (this.card == null)
-				return false; 
-			
-			this.card = null;
-				return true;
+			return $"X: {x} Y: {y} Mean: {mean}";
 		}
 	}
 }

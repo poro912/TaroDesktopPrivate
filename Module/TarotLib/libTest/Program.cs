@@ -2,13 +2,6 @@
 using TaroInterface;
 using TarotLib;
 
-// TarotLib.JsonParser jp = new ();
-
-// jp.open("../../../Universal Waite Major.json");
-// jp.readDeck();
-// jp.close();
-
-
 TarotLib.JsonParser jp = new();
 
 jp.open("../../../Universal Waite Major.json");
